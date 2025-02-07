@@ -11,16 +11,7 @@ def mandelbrot(c, max_iter):
     return max_iter
 
 # Generate the fractal image
-def generate_mandelbrot(width, height, x_min, x_max, y_min, y_max, max_iter):
-    real_vals = np.linspace(x_min, x_max, width)
-    imag_vals = np.linspace(y_min, y_max, height)
-    fractal = np.zeros((height, width))
 
-    for i, y in enumerate(imag_vals):
-        for j, x in enumerate(real_vals):
-            fractal[i, j] = mandelbrot(complex(x, y), max_iter)
-
-    return fractal
 
 # Parameters for the Mandelbrot Set
 width, height = 800, 600
